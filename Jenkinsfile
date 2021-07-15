@@ -9,7 +9,8 @@ pipeline {
     stage('Build and Publish Image') {
       steps {
         
-       sh 'sudo mvn install clean'
+       sh 'mvn install clean'
+         sh 'mvn package'
       }
     }
   }
