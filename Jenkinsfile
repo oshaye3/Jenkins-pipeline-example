@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build and Publish Image') {
       steps {
-        dir("/home/centos/workspace/week-1-lession-2-task/pipelinedemo/pipelinedemo") {
+        dir("/home/centos/workspace/week-1-lession-2-task/pipelinedemo") {
        sh 'mvn install clean'
          sh 'mvn package'
         }
