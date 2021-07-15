@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Initialize'){
             steps{
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
+                echo "PATH = $PATH:$HOME/bin:$JAVA_HOME:$MAVEN_HOME:$M2"
+                echo "M2 = /opt/apache-maven-3.8.1/bin"
             }
         }
         stage('Build') {
