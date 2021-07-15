@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build and Publish Image') {
       steps {
-        dir("/var/lib/jenkins/workspace/pipelinedemo/my-app") {
+        dir("/var/lib/jenkins/workspace/pipelinedemo") {
        sh 'mvn install clean'
          sh 'mvn package'
         }
